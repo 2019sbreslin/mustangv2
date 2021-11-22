@@ -1,0 +1,15 @@
+{
+    "firstName":"Ferris",
+	"lastName":"Bueller",
+    "preferredName":"Bueller",
+    "bestFriend":"Cameron",
+	"email":"bueelleerr@dayoff.com",
+	"phoneNumber":"1-800-ih8-skool",
+	"city":"Chicago",
+	"state":"IL",
+	"zip":"60007",
+	"lat":"41.881832",
+	"lng":"-87.623177",
+	"favoriteHobby":"Getting away with skipping school",
+	"favoriteSport": "Baseball"
+}

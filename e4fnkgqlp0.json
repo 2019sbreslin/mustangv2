@@ -1,0 +1,26 @@
+{
+    "firstName":"Sarah",
+    "lastName":"Breslin",
+    "preferredName":"Sarah",
+    "bestFriend":"Megan",
+    "email":"sarahabreslin@lewisu.edu",
+    "phoneNumber":"618-318-2183",
+    "class":"CPSC-24700-001",
+    "room":"AS-124-A",
+    "startTime":"3pm CT",
+    "seatNumber":"?",
+    "inPerson": [
+        "Monday",
+        "Wednesday"
+    ],
+    "virtual":[
+        "Friday"
+    ],
+    "city":"Pinckneyville",
+    "state":"IL",
+    "zip":"62274",
+    "lat":"38.0803",
+    "lng":"-89.3820",
+    "favoriteHobby":"lifting"
+
+}

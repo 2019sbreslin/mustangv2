@@ -1,0 +1,15 @@
+{
+    "firstName":"Tony",
+    "lastName":"Stark",
+    "preferredName":"Iron Man",
+    "bestFriend":"James Rhodes",
+    "email":"anthonyestark@lewisu.edu",
+    "phoneNumber":"1-800-irn-mann",
+    "city":"Long Island",
+    "state":"NY",
+    "zip":"11101",
+    "lat":"40.792240",
+    "lng":"-73.138260",
+    "favoriteHobby":"telling jokes",
+    "favoriteSport":"eSports"
+}

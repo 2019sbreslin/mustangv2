@@ -1,0 +1,35 @@
+h1 {
+    background-color: rgb(230, 61, 193);
+    color: white;
+}
+  
+body { 
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 14pt;
+  background-color: #e998d5;
+  color: white;
+ }
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 14px;
+
+}
+
+
+button {
+  font-size: 14px;
+  margin-top:1.5em;
+  margin-bottom: 1.5em;
+  background-color: rgb(243, 180, 235);
+  border: none;
+  color: black;
+  padding: 5px 10px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 16px;}
+
+  button:hover {
+    background-color: #f1f1f1;}
