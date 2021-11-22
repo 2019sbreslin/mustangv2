@@ -3,7 +3,7 @@ var contactArray = [];
 var loadingContact = 0;
 var currentContactIndex = 0; 
 
-function viewCurrentContact() {
+function viewCurrentContact() { //creating contact array
     currentContact = contactArray[currentContactIndex];
     console.log(currentContact);
     document.getElementById("nameID").value = currentContact.preferredName;   
@@ -11,10 +11,9 @@ function viewCurrentContact() {
     document.getElementById("cityID").value = currentContact.city;   
     document.getElementById("stateID").value = currentContact.state;
     document.getElementById("zipID").value = currentContact.zip;  
-
-    document.getElementById("statusID").innerHTML = "Status: Viewing contact " + (currentContactIndex+1) + " of " + contactArray.length;
+    document.getElementById("statusID").innerHTML = "Status: Viewing contact " + (currentContactIndex+1) + " of " + contactArray.length; //fields added
 }
-
+//shows user the previous contact they were just on
 function previous() {
     if (currentContactIndex > 0) {
         currentContactIndex--;
@@ -23,7 +22,7 @@ function previous() {
     viewCurrentContact();
 
 }
-
+//allows user to go through all contacts
 function next() {
     if (currentContactIndex < (contactArray.length-1)) {
         currentContactIndex++;
@@ -32,7 +31,7 @@ function next() {
     viewCurrentContact();
 
 }
-
+//puts in a new contact
 function addContact() {
     console.log("Adding contact");
     document.getElementById("...").innerHTML = "";
@@ -49,6 +48,7 @@ function addContact() {
     viewCurrentContact();
     document.getElementById("contactsID").innerHTML = JSON.stringify(contactArray,null,2);
 }
+//removes contact from the arraylist
 function deleteContact() {
     if(contactArray.length>1) {
         console.log("Deleting contact...");
@@ -62,7 +62,7 @@ function deleteContact() {
         document.getElementById("...").innerHTML = "ONE CONTACT REQUIRED"
         console.log("ONE CONTACT REQUIRED")
     }
-}
+}//used example code to easily fill in the state/city
 function getLocation() {
     var zip = document.getElementById("zipID").value
     console.log("zip code:"+zip);
@@ -81,6 +81,7 @@ function getLocation() {
     XMLHttpRequest.open("GET", "getCityState.php?zip=" + zip);
     XMLHttpRequest.send(null);
 }
+//loads contacts from previous sprints
 
 async function index() {
     const response = await fetch("https://mustang2v1.azurewebsites.net/index.json");
@@ -112,7 +113,31 @@ function loadIndex() {
     }
     indexRequest.send();
 }
+function loadContacts() {
+    contactArray.length = 0;
+    loadingContact = 0;
+async function nextContact(URL) {
+    const response = await fetch(URL)
+    const contactResponse = await response.text()
+    
+    var stringContact = JSON.stringify(contactResponse)
+    console.log(stringContact)
+    console.log(contactResponse)
+    console.log("Contact: " + contactResponse.firstname);
+    contactArray.push(stringContact)
+    document.getElementById("contact").innerHTML = contactArray[loadingContact]
 
+    loadingContact++;
+
+    if (contactURLArray.length > loadingContact)  {
+        nextContact(contactURLArray[loadingContact]);
+    }
+}
+
+    if (contactURLArray.length > loadingContact) {
+        loadNextContact(contactURLArray[loadingContact]);
+    }
+}
 
 function contactsA() {
     contactArray.length = 0;
@@ -124,7 +149,7 @@ function contactsA() {
 function contactLog() {
     console.log(contactArray);
 
-}
+}//function to go to the next contact
 async function nextContact(URL){
     console.log("URL: " + URL);
     const response = await fetch(URL);
@@ -149,6 +174,6 @@ async function nextContact(URL){
         viewCurrentContact()
     }
 
-
+}
 
 
