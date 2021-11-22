@@ -1,35 +1,73 @@
 h1 {
-    background-color: rgb(230, 61, 193);
+    background-color: rgb(188, 125, 224);
     color: white;
 }
   
 body { 
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 14pt;
-  background-color: #e998d5;
-  color: white;
+  background-color: white
  }
-input {
-  border: 1px solid transparent;
-  background-color: #f1f1f1;
-  padding: 10px;
-  font-size: 14px;
-
-}
-
 
 button {
   font-size: 14px;
   margin-top:1.5em;
   margin-bottom: 1.5em;
   background-color: rgb(243, 180, 235);
-  border: none;
-  color: black;
   padding: 5px 10px;
+  color: black;
+  cursor: pointer;
   text-decoration: none;
   display: inline-block;
-  cursor: pointer;
-  border-radius: 16px;}
+  border: none;
+  border-radius: 15px;}
 
-  button:hover {
-    background-color: #f1f1f1;}
+button:hover {
+    background-color: white;}
+
+input {
+    border: 1px solid transparent;
+    background-color: #efd0fd;
+    padding: 12px;
+    font-size: 15.4px;
+    }
+input[type=submit] {
+    background-color: rgb(143, 21, 116);
+    color: white;
+    cursor: pointer;
+    }
+
+input[type=text] {
+    background-color: rgb(208, 123, 241);
+    width: 100%;
+    }  
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid white;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    top: 100%;
+    left: 0;
+    right: 0;
+    }
+      
+.autocomplete-items div {
+    padding: 12px;
+    cursor: pointer;
+    border-bottom: 1px solid white;
+    background-color: white; 
+    }
+.autocomplete {
+    position: relative;
+    flex-flow: column wrap;
+    display: inline-block;
+    }
+.autocomplete-items div:hover {
+    background-color:white; 
+}
+
+.autocomplete-active {
+    background-color:rgb(143, 21, 116) !important; 
+    color: white; 
+}
