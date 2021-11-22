@@ -5,14 +5,14 @@ var loadingContact = 0;
 var currentContactIndex = 0; 
 
 function initApplication() {
-    console.log('Mustang v2 Starting!...'); 
+    console.log('Mustang V2 Starting!...'); 
 }
 
 function viewCurrentContact(){
     currentContact = contactArray[currentContactIndex];
     console.log("Current Contact: ");
     console.log(contactArray[currentContactIndex]);
-    document.getElementById("nameID").value = currentContact.firstName;   
+    document.getElementById("nameID").value = currentContact.name;   
     document.getElementById("emailID").value = currentContact.email;   
     document.getElementById("cityID").value = currentContact.city;   
     document.getElementById("stateID").value = currentContact.state;
